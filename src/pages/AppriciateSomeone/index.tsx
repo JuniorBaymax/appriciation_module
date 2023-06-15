@@ -22,6 +22,7 @@ const AppriciateSomeone = () => {
               className="close close-modal-btn"
               data-dismiss="modal"
               aria-label="Close"
+              style={{ all: 'unset' }}
             >
               <i
                 className="close close-modal-btn las la-times"
@@ -91,7 +92,7 @@ const AppriciateSomeone = () => {
             </div>
 
             <div className="send-to-all">
-              <input type="checkbox" checked data-toggle="toggle" />
+              {/* <input type="checkbox" checked data-toggle="toggle" /> */}
               <div className="d-flex justify-content-center">
                 <p className="text-center snd-to-all-txt m-0">
                   Send communication to all employees?
