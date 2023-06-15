@@ -1,6 +1,8 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 
+import ResetPassword from '../../components/ResetPassword';
+
 const Sidebar = () => {
   const navigate = useNavigate();
   return (
@@ -52,7 +54,7 @@ const Sidebar = () => {
           </a>
         </li>
         <li className="menu-item" data-toggle="modal" data-target="#resetPass">
-          <a href="#" onClick={() => navigate('/reset-password')} className="menu-a">
+          <a href="#" onClick={() => console.log('ds')} className="menu-a">
             <div className="menu-txt-hld">
               <span>
                 <img alt="synchronize" src="/src/assets/images/synchronize.png" />
@@ -72,6 +74,7 @@ const Sidebar = () => {
           </a>
         </li>
       </ul>
+      <ResetPassword />
     </nav>
   );
 };

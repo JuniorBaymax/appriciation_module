@@ -1,15 +1,13 @@
 import FormControl from '@mui/material/FormControl';
-import InputLabel from '@mui/material/InputLabel';
 import MenuItem from '@mui/material/MenuItem';
-import Select, { SelectChangeEvent } from '@mui/material/Select';
-import React from 'react';
+import Select from '@mui/material/Select';
 
 const AppriciateSomeone = () => {
   return (
     <div
       className="modal fade appreciation-form"
       id="appreciateSomeoneModal"
-      tabIndex={'-1'}
+      tabIndex={-1}
       role="dialog"
       aria-labelledby="exampleModalCenterTitle"
       aria-hidden="true"

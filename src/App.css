@@ -633,7 +633,7 @@ ol {
 /* --------------------RESET PASSWORD----------------- */
 
 #resetPass .modal-content {
-  height: 22rem;
+  height: 25rem;
   width: 31rem;
   background-color: aliceblue;
   border-radius: 9px;
