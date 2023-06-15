@@ -1,10 +1,17 @@
+import { useQuery } from '@tanstack/react-query';
 import React from 'react';
 
+import { fetchAppriciationList } from '../../api/mainApi';
 import UserPosts from '../../components/UserPosts';
 import UsersFeedActivity from '../../components/UsersFeedActivity';
 import AppriciateSomeone from '../AppriciateSomeone';
 
 const ActivityFeed = () => {
+  const { data, error, isLoading, isSuccess } = useQuery({
+    queryKey: ['appriciation_list'],
+    queryFn: () => fetchAppriciationList('1'),
+  });
+
   return (
     <div className="row mr-0" style={{ width: '100%' }}>
       <div className="col-md-10" style={{ paddingRight: '0 !important' }}>
@@ -43,8 +50,7 @@ const ActivityFeed = () => {
         <div className="feed-area">
           <div className="row">
             <div className="col-md-12">
-              <UserPosts />
-              <UserPosts />
+              {isSuccess ? <UserPosts data={data} /> : null}
             </div>
           </div>
         </div>
